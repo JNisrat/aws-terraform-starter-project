@@ -23,10 +23,10 @@ resource "aws_instance" "web" {
   }
 }
 
-resource "aws_s3_bucket" "demo_bucket" {
+resource "aws_s3_bucket" "nj_bucket" {
   bucket = var.bucket_name
 
   tags = {
-    Name = "nj-bucket"
+    Name = "njt-bucket"
   }
 }
