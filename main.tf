@@ -16,7 +16,7 @@ data "aws_ami" "app_ami" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
-  instance_type = var.instance_type
+  instance_type = "t3.nano"
 
   tags = {
     Name = "Demo-world"
@@ -24,7 +24,7 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_s3_bucket" "demo_bucket" {
-  bucket = var.bucket_name
+  bucket = "my-terraform-demo-bucket-2026"
 
   tags = {
     Name = "demo-bucket"
