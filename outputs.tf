@@ -1,7 +1,9 @@
-#output "instance_ami" {
-#  value = aws_instance.web.ami
-#}
+output "instance_public_ip" {
+  description = "Public IP of the EC2 instance"
+  value       = aws_instance.web.public_ip
+}
 
-#output "instance_arn" {
-#  value = aws_instance.web.arn
-#}
+output "s3_bucket_name" {
+  description = "S3 bucket name"
+  value       = aws_s3_bucket.demo_bucket.bucket
+}
