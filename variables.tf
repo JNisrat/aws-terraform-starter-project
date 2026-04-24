@@ -7,5 +7,5 @@ variable "instance_type" {
 variable "bucket_name" {
   description = "Globally unique S3 bucket name"
   type        = string
-  default     = "my-terraform-demo-bucket-2026"
+  default     = "my-terraform-njbucket-2026"
 }
